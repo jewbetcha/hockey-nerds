@@ -1,17 +1,23 @@
+from flask import Flask
+from flask import request
+from flask_cors import CORS
 import statistics
 import csv
-import pprint
-import sys
 
+app = Flask(__name__)
+CORS(app)
 
+@app.route('/goals-for-against', methods=['POST'])
 def goals_for_against_avg():
+	teams = request.json
+	team_1 = teams['team_1']
+	team_2 = teams['team_2']
+
 	reader = csv.DictReader(open('./sample-data/teams.csv'))
 	data = []
 	for row in reader:
 		data.append(row)
 
-	team_1 = sys.argv[1]
-	team_2 = sys.argv[2]
 	out_data = {}
 
 	for team in data:
@@ -22,10 +28,13 @@ def goals_for_against_avg():
 	
 	t1_gf_ga = float(out_data[team_1]['xGF/60']) + float(out_data[team_1]['xGA/60'])
 	t2_gf_ga = float(out_data[team_2]['xGF/60']) + float(out_data[team_2]['xGA/60'])
-	print(team_1 + ': ' + str(t1_gf_ga) + ', ' + team_2 + ': ' + str(t2_gf_ga) + ', AVG: ' + str(statistics.mean([t1_gf_ga, t2_gf_ga])))
 
-
+	return {
+		'average': str(statistics.mean([t1_gf_ga, t2_gf_ga])),
+		'team_1': t1_gf_ga,
+		'team_2': t2_gf_ga
+	}
 
 
 if __name__ == '__main__':
-	goals_for_against_avg()
+    app.run()

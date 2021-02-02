@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import Container from '@material-ui/core/Container'
+import AppBar from '@material-ui/core/AppBar'
+import Typography from '@material-ui/core/Typography'
+import Toolbar from '@material-ui/core/Toolbar'
+import GoalsForAgainst from './components/GoalsForAgainst'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Container fixed>
+      <AppBar position="static">
+        <Toolbar>
+          <Typography variant="h6">Hockey Nerds</Typography>
+        </Toolbar>
+      </AppBar>
+      <GoalsForAgainst />
+    </Container>
+  )
 }
 
-export default App;
+export default App
