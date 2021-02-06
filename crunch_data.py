@@ -34,7 +34,7 @@ def goals_for_against_avg():
 	print(team_1 + ': ' + str(t1_gf_ga) + ', ' + team_2 + ': ' + str(t2_gf_ga) + ', AVG: ' + str(statistics.mean([t1_gf_ga, t2_gf_ga])))
 
 def adjusted_plus_minus():
-	df = pd.read_csv('./sample-data/test.csv', skiprows=1, names=['date', 'visitor', 'visitor_goals', 'home', 'home_goals'])
+	df = pd.read_csv('./sample-data/2021data.csv', skiprows=1, names=['date', 'visitor', 'visitor_goals', 'home', 'home_goals'])
 	df = clean_dataset(df)
 
 	df['date'] = pd.to_datetime(df['date'], format='%Y-%m-%d')
