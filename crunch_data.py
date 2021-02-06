@@ -64,6 +64,7 @@ def adjusted_plus_minus():
 	df_ratings = pd.DataFrame(data={'team': X.columns, 'rating': lr.coef_})
 	print(df_ratings.sort_values(by=['rating']))
 
+# TODO: add stats and asjusted_plus_minus for basketball too
 
 if __name__ == '__main__':
 	adjusted_plus_minus()
