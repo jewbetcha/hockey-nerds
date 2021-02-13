@@ -161,15 +161,15 @@ date,visitor,visitor_goals,home,home_goals
 2021-02-05,Boston Bruins,2,Philadelphia Flyers,1
 2021-02-05,Detroit Red Wings,1,Tampa Bay Lightning,3
 2021-02-05,Los Angeles Kings,2,Vegas Golden Knights,5
-2021-02-06,San Jose Sharks,1,Anaheim Ducks,2,SO,,2:36,
-2021-02-06,Edmonton Oilers,4,Calgary Flames,6,,,2:33,
+2021-02-06,San Jose Sharks,1,Anaheim Ducks,2
+2021-02-06,Edmonton Oilers,4,Calgary Flames,6
 2021-02-06,Pittsburgh Penguins,3,New York Islanders,4
 2021-02-06,Montreal Canadiens,2,Ottawa Senators,1
 2021-02-06,Arizona Coyotes,3,St. Louis Blues,1
 2021-02-06,Vancouver Canucks,1,Toronto Maple Leafs,5
 2021-02-07,Carolina Hurricanes,6,Columbus Blue Jackets,5
-2021-02-07,Chicago Blackhawks,2,Dallas Stars,1,OT,42
-2021-02-07,Detroit Red Wings,4,Florida Panthers,1,,37
+2021-02-07,Chicago Blackhawks,2,Dallas Stars,1
+2021-02-07,Detroit Red Wings,4,Florida Panthers,1
 2021-02-07,Los Angeles Kings,3,Vegas Golden Knights,4
 2021-02-07,Philadelphia Flyers,7,Washington Capitals,4
 2021-02-08,Carolina Hurricanes,2,Columbus Blue Jackets,3
@@ -197,3 +197,5 @@ date,visitor,visitor_goals,home,home_goals
 2021-02-11,Calgary Flames,3,Vancouver Canucks,1
 2021-02-11,Anaheim Ducks,1,Vegas Golden Knights,0
 2021-02-11,Ottawa Senators,1,Winnipeg Jets,5
+2021-02-12,St. Louis Blues,4,Arizona Coyotes,1
+2021-02-12,Boston Bruins,1,New York Rangers,0
