@@ -52,9 +52,6 @@ def adjusted_plus_minus_hockey(data_file):
 
 	df_train = df_model
 
-	## Not sure why but the data is kinda broken and the sharks column comes up empty and breaks everything /shrug
-	del df_train['San Jose Sharks']
-
 	lr = Ridge(alpha=0.001) 
 	X = df_train.drop(['goal_difference'], axis=1)
 	y = df_train['goal_difference']
@@ -97,4 +94,4 @@ def adjusted_plus_minus_basketball(data_file):
 
 if __name__ == '__main__':
 	adjusted_plus_minus_hockey('./sample-data/2021data.csv')
-	adjusted_plus_minus_basketball('./sample-data/2021_basketball_data.csv')
+	# adjusted_plus_minus_basketball('./sample-data/2021_basketball_data.csv')
